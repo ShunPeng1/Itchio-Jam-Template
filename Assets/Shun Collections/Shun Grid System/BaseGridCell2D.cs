@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Shun_Unity_Editor;
 using UnityEngine;
 
 namespace Shun_Grid_System
@@ -12,15 +11,15 @@ namespace Shun_Grid_System
         [Header("Base")]
         public readonly List<BaseGridCell2D<TItem>> InDegreeCells = new(), OutDegreeCells = new();
         private readonly Dictionary<BaseGridCell2D<TItem> ,double> _outDegreeAdjacentCellCosts = new();
-        [ShowImmutable] public int XIndex, YIndex;
-        [ShowImmutable] public TItem Item;
-        [ShowImmutable] public bool IsObstacle = false;
+        public int XIndex, YIndex;
+        public TItem Item;
+        public bool IsObstacle = false;
 
         [Header("Pathfinding Debug")] 
-        [ShowImmutable] public BaseGridCell2D<TItem> ParentXZCell2D = null; 
-        [ShowImmutable] public double FCost;
-        [ShowImmutable] public double HCost;
-        [ShowImmutable] public double GCost;
+        public BaseGridCell2D<TItem> ParentXZCell2D = null; 
+        public double FCost;
+        public double HCost;
+        public double GCost;
 
 
         protected BaseGridCell2D(int xIndex, int yIndex, TItem item = default)
